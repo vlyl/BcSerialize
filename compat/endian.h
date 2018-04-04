@@ -9,7 +9,7 @@
 #include <config/bitcoin-config.h>
 #endif
 
-#include "../compat/byteswap.h"
+#include "byteswap.h"
 
 #include <stdint.h>
 
@@ -106,6 +106,8 @@ inline uint64_t le64toh(uint64_t little_endian_64bits)
 #endif // HAVE_DECL_LE64TOH
 
 #else // WORDS_BIGENDIAN
+
+
 
 #if HAVE_DECL_HTOBE16 == 0
 inline uint16_t htobe16(uint16_t host_16bits)
